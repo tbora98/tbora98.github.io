@@ -1,0 +1,36 @@
+/* Minimal, clean academic profile theme (no frameworks) */
+:root{
+  --bg: #0b0c10;
+  --text: #e6edf3;
+  --muted: #9fb3c8;
+  --accent: #64ffda;
+  --card: #11131a;
+  --border: #1f2430;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#ffffff; --text:#0f172a; --muted:#475569; --accent:#0ea5e9; --card:#f8fafc; --border:#e2e8f0;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:960px;margin:0 auto;padding:24px}
+.site-header{border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(100,255,218,0.08),transparent)}
+.hero{display:grid;grid-template-columns:96px 1fr;gap:24px;align-items:center;padding:48px 24px}
+.avatar{width:96px;height:96px;border-radius:999px;background:var(--card);display:grid;place-items:center;font-weight:800;font-size:24px;border:1px solid var(--border)}
+h1{margin:0 0 8px 0;font-size:34px;letter-spacing:0.2px}
+h2{margin-top:40px;font-size:22px;border-bottom:1px solid var(--border);padding-bottom:6px}
+.tagline{margin:6px 0 12px 0;color:var(--muted)}
+.links a{color:var(--text);text-decoration:none;border-bottom:1px dashed var(--border)}
+.links span{margin:0 8px;color:var(--muted)}
+.button{display:inline-block;padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:var(--card);text-decoration:none;color:var(--text);font-weight:600}
+ul,ol{padding-left:18px}
+.note{color:var(--muted);font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{border:1px solid var(--border);background:var(--card);padding:16px;border-radius:16px}
+.card h3{margin:0 0 6px 0}
+.meta{color:var(--muted);font-size:14px}
+.site-footer{border-top:1px solid var(--border);margin-top:40px}
+a{color:var(--accent)}
+a:hover{opacity:0.9}
+@media (max-width:640px){.hero{grid-template-columns:64px 1fr}.avatar{width:64px;height:64px}}
