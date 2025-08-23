@@ -34,3 +34,36 @@ ul,ol{padding-left:18px}
 a{color:var(--accent)}
 a:hover{opacity:0.9}
 @media (max-width:640px){.hero{grid-template-columns:64px 1fr}.avatar{width:64px;height:64px}}
+/* --- Mobile polish (phones + small tablets) --- */
+img { max-width: 100%; height: auto; }
+
+/* Avatar image inside the circle */
+.avatar img {
+  display: block;
+  width: 96px; height: 96px;            /* default desktop size */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Tighten the header on small screens */
+@media (max-width: 640px) {
+  .container { padding: 16px; }
+  .hero { grid-template-columns: 72px 1fr; gap: 12px; padding: 24px 16px; }
+  .avatar, .avatar img { width: 72px; height: 72px; }
+  h1 { font-size: 24px; margin-bottom: 2px; }
+  .tagline { font-size: 14px; line-height: 1.4; }
+  .links { font-size: 14px; }
+
+  /* If you have the top nav */
+  .topnav { position: static; flex-wrap: wrap; gap: 8px; padding: 10px 16px; }
+
+  /* Make project cards stack */
+  .cards { grid-template-columns: 1fr; }
+}
+
+/* --- Sidebar layout support (if you used the two-column version) --- */
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr !important; }
+  .sidebar { position: static !important; }
+}
+
